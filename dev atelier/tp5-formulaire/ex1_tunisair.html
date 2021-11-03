@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tunisair</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Réserver/acheter</legend>
+      <table>
+        <tbody>
+          <tr>
+            <td>De:</td>
+            <td>
+              <select name="from">
+                <option value="tunis" selected>Tunis</option>
+                <option value="germany" selected>Germany</option>
+                <option value="california">California</option>
+              </select>
+            </td>
+            <td>Vers:</td>
+            <td>
+              <select name="from">
+                <option value="tunis" selected>Tunis</option>
+                <option value="germany" selected>Germany</option>
+                <option value="california">California</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Type de voyage:</td>
+            <td><input type="radio" name="aller" /> Aller simple</td>
+            <td><input type="radio" name="aller" /> Aller retour</td>
+          </tr>
+          <tr>
+            <td>Départ:</td>
+            <td>
+              <input type="date" name="date" />
+            </td>
+            <td>
+              <input type="time" name="date" />
+            </td>
+            <td>
+              <img src="./callender.png" />
+            </td>
+          </tr>
+          <tr>
+            <td>Retour:</td>
+            <td>
+              <input type="date" name="date" />
+            </td>
+            <td>
+              <input type="time" name="date" />
+            </td>
+            <td>
+              <img src="./callender.png" />
+            </td>
+          </tr>
+          <tr>
+            <td>Voyageurs</td>
+            <td>
+              <label>Adultes (25+)</label><br />
+              <input type="number" width="10" max="2" />
+            </td>
+            <td>
+              <label>Jeunes (12-24)</label><br />
+              <input type="number" max="2" />
+            </td>
+            <td>
+              <label>Enfants (2-11)</label><br />
+              <input type="number" max="2" />
+            </td>
+            <td>
+              <label>Bébé (0-2)</label><br />
+              <input type="number" max="2" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p align="right"><input type="submit" value="VALIDER" /></p>
+    </fieldset>
+  </body>
+</html>

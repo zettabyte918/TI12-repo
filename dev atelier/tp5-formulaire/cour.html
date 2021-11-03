@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Formulaire</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Votre information</legend>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <label>Nom:</label>
+              </td>
+              <td>
+                <input type="text" name="name" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Prenom:</label>
+              </td>
+              <td>
+                <input type="text" name="lname" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Adresse:</label>
+              </td>
+              <td>
+                <textarea
+                  placeholder="entrez votre adresse"
+                  name="adr"
+                ></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Cin:</label>
+              </td>
+              <td>
+                <input type="number" name="cin" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Tel:</label>
+              </td>
+              <td>
+                <input type="number" name="tel" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>E-mail:</label>
+              </td>
+              <td>
+                <input type="email" name="email" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Sexe:</label>
+              </td>
+              <td>
+                <input type="radio" name="sexe" required /> Femme
+                <input type="radio" name="sexe" required /> Homme
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Votre langauge prefere:</legend>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <label>Choissir les langauge</label>
+              </td>
+              <td>
+                <select name="lang">
+                  <option value="Anglais">Anglais</option>
+                  <option value="Arabe" selected>Arabe</option>
+                  <option value="allemand">allemand</option>
+                  <option value="Chninois">Chinois</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Confirmation:</legend>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <input type="submit" value="Envoyer"/>
+              </td>
+              <td>
+                <input type="reset" value="Cancel" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </form>
+  </body>
+</html>
