@@ -10,7 +10,7 @@ void main(){
     {
         i++;
     }
-    ch[i]==ch[strlen(ch)-i-1] ? printf("palindrom \n") : printf("non palinfrome \n");
+    ch[i]==ch[strlen(ch)-i-1] ? printf("%s est palindrom \n",ch) : printf("non palinfrome \n");
     
 }
     
