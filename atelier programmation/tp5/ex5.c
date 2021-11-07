@@ -11,10 +11,10 @@ void main(){
         j=-1;
         do {
             j++;
-        }while(ch[i] != ch1[i]);
-    ch[i]=ch1[i+1];
+        }while(ch[i] != ch1[j]);
+    ch[i]=ch1[j+1];
     }    
-    printf("%s",ch);
+    printf("%s \n",ch);
     
     
 }
