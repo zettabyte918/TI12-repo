@@ -4,7 +4,7 @@ void main(){
     char adn[9][4] = {"GTG","CAC","CTG","ACT", "CCT","GAG", "AGG","TCT","GCC"};
     char t[50][4];
     char ch1,ch2;
-    int n,i,j,ok;
+    int n,i,j,ok,occ;
     printf("entrez N= ");
     scanf("%d",&n);
     for (i = 0; i <= n; i++){
@@ -15,17 +15,20 @@ void main(){
             scanf("%s",t[i]);
             j=0;
             do{
-                ch1=t[i];
-                ch2=adn[j];
-                printf("%s==%s %d\n",ch1,ch2,t[i]==adn[j]);
-                if(t[i] == adn[j]) {
+                //printf("%s==%s %d\n",t[i],adn[j],strcmp(t[i],adn[j]));
+                if(strcmp(t[i],adn[j])==0) {
                     ok=1;
-                    printf("ggggggggg");
                 } else {
                     j++;
                 }
             }while(ok == 0 && j<9);
        }while(ok==0);
     }
-    
+    //nombre d'occurence
+    occ=0;
+    for (int j = 0; j <= i; j++){
+        if(!strcmp(t[j],"CAC"))
+            occ++;
+    }
+    printf("Le nombre doccurence CAC= %d \n",occ);
 }
