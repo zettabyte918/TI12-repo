@@ -2,24 +2,26 @@
 <html lang="en">
   <head>
     <title>Formulaire</title>
+   <link rel="stylesheet" type="text/css" href="karim.css">
   </head>
   <body>
+    
     <form>
-      <fieldset>
-        <legend>Votre information</legend>
+      <fieldset class="field1"> 
+        <legend class="karim" style="border-radius: 2px; padding: 1px 3px;">Votre information</legend>
         <table>
           <tbody>
             <tr>
               <td>
-                <label>Nom:</label>
+                <label class="f" style="padding: 1px 3px; border-radius: 10px;">Nom:</label>
               </td>
               <td>
-                <input type="text" name="name" required />
+                <input type="text" placeholder="entre votre nom" name="name" required />
               </td>
             </tr>
             <tr>
               <td>
-                <label>Prenom:</label>
+                <label style="padding: 1px 3px; border-radius: 10px;">Prenom:</label>
               </td>
               <td>
                 <input type="text" name="lname" required />
@@ -27,7 +29,7 @@
             </tr>
             <tr>
               <td>
-                <label>Adresse:</label>
+                <label class="f" style="padding: 1px 3px; border-radius: 10px;">Adresse:</label>
               </td>
               <td>
                 <textarea
@@ -38,7 +40,7 @@
             </tr>
             <tr>
               <td>
-                <label>Cin:</label>
+                <label style="padding: 1px 3px; border-radius: 10px;">Cin:</label>
               </td>
               <td>
                 <input type="number" name="cin" required />
@@ -46,7 +48,7 @@
             </tr>
             <tr>
               <td>
-                <label>Tel:</label>
+                <label style="padding: 1px 3px; border-radius: 10px;">Tel:</label>
               </td>
               <td>
                 <input type="number" name="tel" required />
@@ -54,7 +56,7 @@
             </tr>
             <tr>
               <td>
-                <label>E-mail:</label>
+                <label style="padding: 1px 3px; border-radius: 10px;">E-mail:</label>
               </td>
               <td>
                 <input type="email" name="email" required />
@@ -62,7 +64,7 @@
             </tr>
             <tr>
               <td>
-                <label>Sexe:</label>
+                <label style="padding: 1px 3px; border-radius: 10px;">Sexe:</label>
               </td>
               <td>
                 <input type="radio" name="sexe" required /> Femme
@@ -92,15 +94,13 @@
           </tbody>
         </table>
       </fieldset>
-      <fieldset>
-        <legend>Confirmation:</legend>
-        <table>
+      <fieldset class="field1">
+        <legend class="karim">Confirmation:</legend>
+        <table class="droit" style="width: 100%;">
           <tbody>
             <tr>
               <td>
                 <input type="submit" value="Envoyer"/>
-              </td>
-              <td>
                 <input type="reset" value="Cancel" />
               </td>
             </tr>
