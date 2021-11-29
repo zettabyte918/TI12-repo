@@ -43,7 +43,7 @@ int minute(int a,int b){
     return a*60+b;
 }
 
-void showBUS(BUS b[],char dep[], char ariv[],int h1,int m1,int h2,int m2){
+void showBUS_num(BUS b[],char dep[], char ariv[],int h1,int m1,int h2,int m2){
     int trouve = 0;
     int i = 0;
     for ( i = 0; i < nbBUS; i++){
@@ -54,17 +54,32 @@ void showBUS(BUS b[],char dep[], char ariv[],int h1,int m1,int h2,int m2){
                     ((minute(h1,m1) <= minute(b[i].time.dep.h,b[i].time.dep.m)) &&
                     (minute(h2,m2) >= minute(b[i].time.arriv.h,b[i].time.arriv.m)))
         ) {
-            printf("\n **NUMERO: %d** DPART: %s - ARRIVEE: %s - HEURE DEPART=%d:%d:%d - HEURE ARRIVEE=%d:%d:%d \n",
-                b[i].num,
-                b[i].location.dep,
-                b[i].location.ariv,
-                b[i].time.dep.h,
-                b[i].time.dep.m,
-                b[i].time.dep.s,
-                b[i].time.arriv.h,
-                b[i].time.arriv.m,
-                b[i].time.arriv.s);
+            printf("\n**NUMERO: %d** \n",b[i].num);
         }
+    }
+    
+}
+
+void showBUS_heure(BUS b[]){
+    BUS b1;
+    int trouve = 0;
+    int i = 0;
+
+    printf("\n Entrez le numéro de bus: ");
+    scanf("%d",&b1.num);
+    printf("Entrez le Lieu du départ de bus: ");
+    scanf("%s",b1.location.dep);
+    printf("Entrez le Lieu d'arrivée de bus: ");
+    scanf("%s",b1.location.ariv);
+    printf("Entrez le Horaire du départ (hh:mm:ss) de bus: ");
+    scanf("%d:%d:%d",&b1.time.dep.h,&b1.time.dep.m,&b1.time.dep.s);
+
+    while (trouve == 0 && i<nbBUS) {
+        if((b[i].num == b1.num) &&
+            (b[i].time.dep.h == b1.time.dep.h) &&
+                (b[i].time.dep.m == b1.time.dep.m) &&
+                    (b[i].time.dep.s == b1.time.dep.s))
+                        trouve=1 && printf("L'heure d'arrivée est: %d:%d:%d \n", b[0].time.arriv.h,b[0].time.arriv.m,b[0].time.arriv.s);
     }
     
 }
@@ -73,5 +88,6 @@ void main(){
     BUS b[10];
 
     addBUS(b);
-    showBUS(b,"nabeul","tunis",7,00,12,30);
+    showBUS_num(b,"nabeul","tunis",7,00,12,30);
+    showBUS_heure(b);
 }
