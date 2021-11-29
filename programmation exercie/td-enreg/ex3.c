@@ -1,3 +1,10 @@
+// Un bus est caractérisé par un numéro, un lieu de départ, un lieu d’arrivée, un horaire de départ et un horaire d’arrivée. L’horaire est exprimé en (heure / minutes / secondes).­
+//     1. déclarer la structure HORAIRE
+//     2. déclarer la structure BUS
+//     3. Saisir un tableau de 10 éléments de type Bus
+//     4. Afficher les numéros des bus qui partent de Nabeul à la direction de Tunis, entre 7h du matin et 12h :30 mn.
+//     5. Afficher l’heure d’arrivée d’un bus sachant son numéro, son lieu et heure de départ et son lieu d’arrivée.
+
 #include <stdio.h>
 #include <string.h>
 
@@ -65,7 +72,7 @@ void showBUS_heure(BUS b[]){
     int trouve = 0;
     int i = 0;
 
-    printf("\n Entrez le numéro de bus: ");
+    printf("\nEntrez le numéro de bus: ");
     scanf("%d",&b1.num);
     printf("Entrez le Lieu du départ de bus: ");
     scanf("%s",b1.location.dep);
@@ -79,7 +86,7 @@ void showBUS_heure(BUS b[]){
             (b[i].time.dep.h == b1.time.dep.h) &&
                 (b[i].time.dep.m == b1.time.dep.m) &&
                     (b[i].time.dep.s == b1.time.dep.s))
-                        trouve=1 && printf("L'heure d'arrivée est: %d:%d:%d \n", b[0].time.arriv.h,b[0].time.arriv.m,b[0].time.arriv.s);
+                        trouve=1 && printf("\nL'heure d'arrivée est: %d:%d:%d \n", b[0].time.arriv.h,b[0].time.arriv.m,b[0].time.arriv.s);
     }
     
 }
