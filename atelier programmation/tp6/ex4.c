@@ -18,13 +18,13 @@ typedef struct {
 typedef struct { 
         int NbEtude;
         int NbMatiere;
-        int Coef[100];
+        float Coef[100];
         Etudiant Etud[100];
     } Class;
 
 void main(){
     Class c;
-    int i;
+    int i,j;
     float moyenne;
     printf("Entrez Nb Etudiant: ");
     scanf("%d",&c.NbEtude);
@@ -32,7 +32,7 @@ void main(){
     scanf("%d",&c.NbMatiere);
     for ( i = 0; i < c.NbMatiere; i++){
         printf("entrez la coef du matiere N°%d: ",i);
-        scanf("%d",&c.Coef[i]);
+        scanf("%f",&c.Coef[i]);
     }
     
 
@@ -57,13 +57,19 @@ void main(){
            
         }
 
-        for (int j = 0; j <c.NbMatiere; j++){
-            int note = c.Etud[i].Note[j] * c.Coef[j];
-            moyenne = moyenne + (note/c.NbMatiere);
+        int tCoef=0;
+        for (j= 0; j <c.NbMatiere; j++){
+            tCoef +=c.Coef[j];
+        }
+
+        float note=0;
+        for (j = 0; j <c.NbMatiere; j++){
+            note = c.Etud[i].Note[j] * c.Coef[j];
+            moyenne +=(note/tCoef);
         }
         c.Etud[i].Moy=moyenne;
 
-        printf("La moyenne du N°%d etudiant =%f \n",i,moyenne);
+        printf("La moyenne du N°%d etudiant =%.2f \n",i,moyenne);
 
 
         

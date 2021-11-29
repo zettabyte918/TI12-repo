@@ -16,7 +16,7 @@ void main(){
     printf("Entrez Age: ");
     scanf("%f",&presonne.age);
 
-    printf("\n Nom: %s \n",presonne.nom);
+    printf("\nNom: %s \n",presonne.nom);
     printf("Prenom: %s \n",presonne.prenom);
     printf("Age: %.0f \n",presonne.age);
 

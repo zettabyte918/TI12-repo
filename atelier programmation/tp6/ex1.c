@@ -23,7 +23,6 @@ void main(){
         printf("entrez le prenom du N°%d enfant: ",i);
         scanf("%s",presonne.PrenomEnfants[i]);
     }
-    printf("%s",presonne.PrenomEnfants[1]);
 }
 
 
