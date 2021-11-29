@@ -51,7 +51,6 @@ void tri(SPORTIF t[]){
                 t[i+1] = aux;
             }
         }
-        
     }
     
 }

@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-const int nbJoueurs = 1;
-const int nbEquipe = 2;
+const int nbJoueurs = 12;
+const int nbEquipe = 3;
 
 typedef struct Date { 
         int j,m,a;
@@ -154,7 +154,7 @@ void lePlusVieuxJoueurs(Equipe e[]){
 }
 
 void main(){
-    Equipe e[3];
+    Equipe e[nbEquipe];
     int nbB;
     equipe(e); //question A
     calculerNbButMarque(e); //question B
