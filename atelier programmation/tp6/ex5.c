@@ -155,7 +155,6 @@ void lePlusVieuxJoueurs(Equipe e[]){
 
 void main(){
     Equipe e[nbEquipe];
-    int nbB;
     equipe(e); //question A
     calculerNbButMarque(e); //question B
     calculerNbutLePlusGRAND(e); //question C

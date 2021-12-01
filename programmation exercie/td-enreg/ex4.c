@@ -62,7 +62,7 @@ void medals(SPORTIF t[]){
 }
 
 void main(){
-    SPORTIF T_SPORT[6];
+    SPORTIF T_SPORT[nbSPORTIF];
     addSPORTIF(T_SPORT);
     tri(T_SPORT);
     medals(T_SPORT);
