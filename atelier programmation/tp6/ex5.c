@@ -158,6 +158,5 @@ void main(){
     equipe(e); //question A
     calculerNbButMarque(e); //question B
     calculerNbutLePlusGRAND(e); //question C
-    lePlusVieuxJoueurs(e); //question D
-    
+    lePlusVieuxJoueurs(e); //question D   
 }

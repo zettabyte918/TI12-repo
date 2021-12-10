@@ -87,6 +87,7 @@ void showBUS_heure(BUS b[]){
                 (b[i].time.dep.m == b1.time.dep.m) &&
                     (b[i].time.dep.s == b1.time.dep.s))
                         trouve=1 && printf("\nL'heure d'arrivée est: %d:%d:%d \n", b[0].time.arriv.h,b[0].time.arriv.m,b[0].time.arriv.s);
+                            else i++;
     }
     
 }
