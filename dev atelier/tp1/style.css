@@ -1,0 +1,31 @@
+/* face="courier" color="green" */
+.title {
+  color: green;
+  font-family: Courier;
+  text-align: center;
+}
+
+/* face="italics" color="blue" */
+.design1 {
+  font-family: italics;
+  color: blue;
+}
+
+/* face="italics" color="red" size="5" */
+.design2 {
+  font-family: italics;
+  color: red;
+  font-size: 1.5em;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}

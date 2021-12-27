@@ -1,0 +1,27 @@
+/* face="courier" color="green" */
+.title1 {
+  color: red;
+  font-family: Courier;
+  text-align: center;
+}
+
+.title2 {
+  color: green;
+  font-family: Courier;
+  text-align: left;
+}
+
+#blackBack {
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
+ul,
+ol {
+  background-color: rgb(240, 228, 228);
+  border-radius: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
