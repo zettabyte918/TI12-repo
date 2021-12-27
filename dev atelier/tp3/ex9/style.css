@@ -1,0 +1,33 @@
+/* face="courier" color="green" */
+.title {
+  color: green;
+  font-family: Courier;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  background-color: #04aa6d;
+  color: white;
+}
+
+tr:hover {
+  background-color: rgb(146, 233, 138);
+}
+
+.green {
+  background-color: #04aa6d;
+}
+
+ul,
+ol {
+  background-color: rgb(240, 228, 228);
+  border-radius: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
