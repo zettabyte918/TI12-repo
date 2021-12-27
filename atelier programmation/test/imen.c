@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int nbrclients = 4;
-
+int   nbrclients;
 typedef struct {
   int j, m, a;
 } date_inscription;
@@ -26,43 +25,56 @@ void remplit(client carnet[], int nbrclients) {
 
 void affiche(client carnet[], int nbrclients) {
   int i;
+  printf("\n");
+  printf("%d",nbrclients);
   for (i = 0; i < nbrclients; i++) {
-    printf("le client n%d: ", i);
-    printf("le nom du client %s ", carnet[i].nom);
-    printf("le nombre de points de fidelite de client: %d ", carnet[i].nbrpf);
-    printf("la date d'inscription (jj,mm,aaaa) de client %d-%d-%d", carnet[i].date.j, carnet[i].date.m, carnet[i].date.a);
+    printf("le client n%d: \n", i);
+    printf("le nom du client %s \n", carnet[i].nom);
+    printf("le nombre de points de fidelite de client: %d \n", carnet[i].nbrpf);
+    printf("la date d'inscription (jj,mm,aaaa) de client %d-%d-%d\n", carnet[i].date.j, carnet[i].date.m, carnet[i].date.a);
   }
 }
 
 int retourne(client carnet[], int nbrclients) {
   int i;
-  int max = carnet[0].nbrpf;
-  for (i = 0; i < nbrclients; i++) {
-    if (max < carnet[i].nbrpf)
-      max = carnet[i].nbrpf;
+  client max = carnet[0];
+  for (i = 1; i < nbrclients; i++) {
+    if (max.nbrpf < carnet[i].nbrpf)
+      max = carnet[i];
   }
-  printf("le joueur numero  %d  est le plus fid�le ", i);
+  return max.nbrpf;
+}
+
+void decalage(client carnet[],int nbrclients,int i){
+    int j;
+    for ( j = i; j<nbrclients ; j++){
+        carnet[j]=carnet[j+1];
+    }
+    
 }
 
 void supprime(client carnet[], int nbrclients) {
-  int i;
-  for (i = 0; i < nbrclients; i++) {
-    if ((carnet[i].date.a = 2012) && (carnet[i].date.m = 12)) {
-      carnet[i] = carnet[i + 1];
+   int i=0;
+    while(i<nbrclients){
+        if((carnet[i].date.a = 2012) && (carnet[i].date.m = 12) ){
+            decalage(carnet,nbrclients,i);
+        nbrclients=nbrclients-1;
+        } else i++;
     }
-  }
+  
 }
 
 int main() {
-  int n, pf;
+  int n;
   client carnet[4];
   printf("la taille de tableau");
   scanf("%d", & nbrclients);
   remplit(carnet, nbrclients);
-  affiche(carnet, nbrclients);
-  pf = retourne(carnet, nbrclients);
-  supprime(carnet, nbrclients);
+  
 
-  printf("la taillehhhh de tableau");
+  printf("le client le plus fidele max = %d \n",retourne(carnet, nbrclients));
+  supprime(carnet, nbrclients);
+  nbrclients=nbrclients-1;
+  affiche(carnet, nbrclients);
   return 0;
 }
