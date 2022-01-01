@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding: 6px;
+  background-color: deepskyblue;
+}
+
+header p {
+  font-family: Georgia;
+  font-size: xx-large;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+
+.imgG {
+  float: left;
+  width: 120px;
+  height: 90px;
+}
+.imgD {
+  float: right;
+  width: 120px;
+  height: 90px;
+}
+
+nav {
+  background-color: deepskyblue;
+  padding-top: 20px;
+  padding-top: 20px;
+  padding-left: 50px;
+  width: 100%;
+}
+
+nav li {
+  display: inline-block;
+}
+
+a {
+  color: darkblue;
+  font-style: italic;
+  font-size: 18px;
+  background-color: white;
+  padding-right: 10px;
+}
+
+nav a {
+  background-color: deepskyblue;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+article {
+  position: absolute;
+  width: 63%;
+  height: 70%;
+  padding: 10px;
+}
+
+footer {
+}
